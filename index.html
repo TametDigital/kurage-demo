@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO On-page -->
+  <title>Électrostimulation prévention escarres patient alité | Kurage</title>
+  <meta name="description" content="Prévenir les escarres chez le patient alité grâce à l'électrostimulation neuromusculaire : mécanismes, cas d'usage en EHPAD, centre de rééducation et domicile. Solution Kurage." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://kurage.fr/prevention-escarres-patient-alite" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Électrostimulation et prévention des escarres chez le patient alité" />
+  <meta property="og:description" content="Comment l'électrostimulation neuromusculaire aide à prévenir les escarres chez les patients à mobilité réduite en établissement ou à domicile." />
+  <meta property="og:site_name" content="Kurage" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,600&display=swap" rel="stylesheet" />
+
+  <!-- JSON-LD FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "L'électrostimulation remplace-t-elle le repositionnement régulier du patient ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non. L'électrostimulation neuromusculaire est un complément aux protocoles de repositionnement, pas un substitut. Elle augmente l'efficacité de la prévention en activant la circulation et en maintenant la masse musculaire entre les retournements, mais ne dispense pas des mobilisations prescrites."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "La solution est-elle adaptée aux patients en soins longue durée ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui. C'est précisément dans ce contexte — patient alité plusieurs semaines ou mois, mobilité très réduite — que l'apport est le plus significatif. Le protocole peut être ajusté à l'état clinique du patient et au niveau de sensibilité cutanée."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Faut-il une prescription médicale pour utiliser la solution Kurage ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "En établissement de santé, l'intégration au protocole de soins est décidée par l'équipe médicale. À domicile, une prescription ou un accompagnement par un professionnel de santé (infirmier, kinésithérapeute) est recommandé pour sécuriser le paramétrage initial."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment la solution s'intègre-t-elle au protocole de l'équipe soignante ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Le dispositif est conçu pour un usage autonome une fois paramétré : l'aide-soignant ou l'infirmier pose les électrodes lors de la toilette ou du soin, lance le programme défini, et le patient bénéficie de la stimulation sans surveillance constante. Les données de session sont accessibles pour le suivi."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Le patient ressent-il quelque chose pendant la stimulation ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La stimulation provoque une légère contraction musculaire et une sensation de picotement, généralement bien tolérée. L'intensité est progressive et adaptable. Pour les patients présentant des troubles de la sensibilité, le paramétrage doit être encadré par un professionnel."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ─── Reset & Base ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:       #0d1b2a;
+      --navy-card:  #132436;
+      --navy-light: #1a3048;
+      --white:      #ffffff;
+      --text:       #c9d1d9;
+      --muted:      #8b97a7;
+      --border:     rgba(255,255,255,0.08);
+      --accent-a:   #ff8a3d;
+      --accent-b:   #ff6b5e;
+      --gradient:   linear-gradient(90deg, #ff8a3d, #ff6b5e);
+      --radius:     10px;
+      --max-content: 900px;
+      --font-sans:  'Space Grotesk', system-ui, sans-serif;
+      --font-serif: 'Fraunces', Georgia, serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--navy);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Typography ─── */
+    h1, h2, h3, h4 {
+      color: var(--white);
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    h1 { font-size: clamp(2rem, 5vw, 3rem); }
+    h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); }
+    h3 { font-size: 1.15rem; font-weight: 600; }
+
+    .overline {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.75rem;
+    }
+
+    .accent-italic {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    a {
+      color: var(--accent-a);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    a:hover { color: var(--accent-b); }
+    a:focus-visible {
+      outline: 2px solid var(--accent-a);
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+
+    /* ─── Layout helpers ─── */
+    .container {
+      max-width: var(--max-content);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .container--wide {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    section { padding: 5rem 0; }
+    section + section { padding-top: 0; }
+
+    /* ─── NAV ─── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13, 27, 42, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .nav-logo img {
+      height: 36px;
+      width: auto;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.55rem 1.2rem;
+      border-radius: var(--radius);
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.15s;
+      text-decoration: none;
+    }
+    .btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn--primary {
+      background: var(--gradient);
+      color: #fff;
+      border: none;
+    }
+    .btn--ghost {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid var(--border);
+    }
+    .btn--ghost:hover { border-color: rgba(255,255,255,0.25); }
+    .nav-hamburger { display: none; }
+
+    @media (max-width: 700px) {
+      .nav-links { display: none; }
+      .nav-hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+      }
+      .nav-hamburger span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: var(--white);
+        border-radius: 2px;
+      }
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      padding: 6rem 0 5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero__layout {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 4rem;
+      align-items: center;
+    }
+    .hero__visual {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .hero__visual img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 360px;
+    }
+    .hero__visual::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(13,27,42,0.25) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    @media (max-width: 900px) {
+      .hero__layout {
+        grid-template-columns: 1fr;
+      }
+      .hero__visual { order: -1; }
+      .hero__visual img { min-height: 240px; }
+    }
+    .hero__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 2rem;
+    }
+    .tag {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: 0.3rem 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      color: var(--muted);
+      background: var(--navy-card);
+    }
+    .hero__chapeau {
+      font-size: 1.1rem;
+      color: var(--text);
+      max-width: 680px;
+      margin-top: 1.5rem;
+      line-height: 1.75;
+    }
+    .hero__cta {
+      margin-top: 2.5rem;
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* ─── PROBLEM ─── */
+    .section-problem {
+      background: var(--navy-card);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .section-problem p + p { margin-top: 1rem; }
+
+    /* ─── MECHANISM ─── */
+    .mechanism-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .mech-card {
+      background: var(--navy-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.5rem;
+      transition: border-color 0.2s;
+    }
+    .mech-card:hover { border-color: rgba(255,138,61,0.35); }
+    .mech-icon {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: rgba(255,138,61,0.12);
+      margin-bottom: 1rem;
+    }
+    .mech-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--accent-a);
+      fill: none;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .mech-card h3 { margin-bottom: 0.5rem; font-size: 1rem; }
+    .mech-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
+
+    /* ─── MECH VISUAL ─── */
+    .mech-visual {
+      margin-top: 3rem;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      max-height: 420px;
+    }
+    .mech-visual img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+    }
+
+    /* ─── CALLOUT ─── */
+    .callout {
+      margin: 0;
+      padding: 5rem 0;
+    }
+    .callout__inner {
+      background: linear-gradient(135deg, #1a2f42 0%, #0f2236 100%);
+      border: 1px solid rgba(255,138,61,0.2);
+      border-radius: 14px;
+      padding: 3rem;
+      display: flex;
+      gap: 3rem;
+      align-items: flex-start;
+    }
+    .callout__number {
+      font-size: clamp(3rem, 8vw, 4.5rem);
+      font-weight: 700;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .callout__text h3 { color: var(--white); margin-bottom: 0.6rem; font-size: 1.1rem; }
+    .callout__text p { color: var(--muted); font-size: 0.92rem; line-height: 1.7; }
+    .callout__text p + p { margin-top: 0.6rem; }
+
+    @media (max-width: 600px) {
+      .callout__inner { flex-direction: column; gap: 1.5rem; }
+    }
+
+    /* ─── USE CASES ─── */
+    .usecase-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .usecase-card {
+      background: var(--navy-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem 1.75rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .usecase-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient);
+    }
+    .usecase-card__label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-a);
+      margin-bottom: 0.75rem;
+    }
+    .usecase-card h3 { margin-bottom: 0.75rem; }
+    .usecase-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
+
+    /* ─── FAQ ─── */
+    .faq-section { padding: 5rem 0; }
+    .faq-list {
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .faq-item {
+      background: var(--navy-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .faq-item summary {
+      list-style: none;
+      padding: 1.25rem 1.5rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--white);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      transition: color 0.2s;
+      font-family: var(--font-sans);
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary:hover { color: var(--accent-a); }
+    .faq-item[open] summary { color: var(--accent-a); }
+    .faq-arrow {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      flex-shrink: 0;
+      transition: transform 0.25s;
+    }
+    .faq-item[open] .faq-arrow { transform: rotate(180deg); }
+    .faq-body {
+      padding: 0 1.5rem 1.25rem;
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      border-top: 1px solid var(--border);
+      padding-top: 1.1rem;
+    }
+
+    /* ─── MAILLAGE ─── */
+    .maillage-section {
+      background: var(--navy-card);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 5rem 0;
+    }
+    .maillage-intro {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .maillage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .maillage-link {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.2rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--navy);
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .maillage-link:hover {
+      border-color: rgba(255,138,61,0.3);
+      background: rgba(255,138,61,0.04);
+    }
+    .maillage-link svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--accent-a);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .maillage-link-text { flex: 1; }
+    .maillage-link-text strong {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.2rem;
+    }
+    .maillage-link-text span {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* ─── CTA FINAL ─── */
+    .cta-section { padding: 6rem 0; }
+    .cta-inner {
+      background: linear-gradient(135deg, #1a2f42 0%, #0f2236 100%);
+      border: 1px solid rgba(255,138,61,0.18);
+      border-radius: 16px;
+      padding: 4rem 3rem;
+      text-align: center;
+    }
+    .cta-inner h2 { margin-bottom: 1rem; }
+    .cta-inner p {
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 2rem;
+      font-size: 1rem;
+    }
+    .cta-group {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 0;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-copy {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .footer-links a {
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--white); }
+
+    /* ─── Divider ─── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+
+    /* ─── Section header ─── */
+    .section-header { margin-bottom: 1rem; }
+    .section-header h2 { margin-top: 0.25rem; }
+    .section-header p {
+      margin-top: 0.75rem;
+      color: var(--muted);
+      max-width: 600px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ─── HEADER / NAV ─── -->
+<header>
+  <div class="container--wide">
+    <nav aria-label="Navigation principale">
+      <a href="#" class="nav-logo" aria-label="Kurage — accueil">
+        <img src="https://kurage.fr/wp-content/uploads/2024/10/LogoKurage-300x84.png" alt="Kurage" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#">Solutions</a></li>
+        <li><a href="#">Marchés</a></li>
+        <li><a href="#">Cas d'usage</a></li>
+        <li><a href="#">Ressources</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#demo" class="btn btn--primary">Demander une démo</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- ─── HERO ─── -->
+<main>
+<section class="hero">
+  <div class="container--wide">
+    <div class="hero__layout">
+      <div class="hero__content">
+        <span class="overline">Prévention des escarres</span>
+        <h1>Prévenir les escarres chez le patient alité grâce à l'électrostimulation neuromusculaire</h1>
+        <p class="hero__chapeau">
+          L'immobilité prolongée prive les muscles de toute contraction active : les points d'appui subissent une pression constante, la microcirculation s'effondre, et les tissus se nécrosent progressivement. L'électrostimulation neuromusculaire ciblée réactive la contraction musculaire et le retour veineux <span class="accent-italic">sans nécessiter le moindre mouvement volontaire du patient</span>, en complément des protocoles de repositionnement habituels.
+        </p>
+        <div class="hero__tags" aria-label="Contextes d'usage">
+          <span class="tag">EHPAD &amp; soins longue durée</span>
+          <span class="tag">Centres de rééducation</span>
+          <span class="tag">Maintien à domicile</span>
+        </div>
+        <div class="hero__cta">
+          <a href="#demo" class="btn btn--primary">Évaluer pour mon établissement</a>
+          <a href="#mecanisme" class="btn btn--ghost">Comprendre le mécanisme</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <img
+          src="https://kurage.fr/wp-content/uploads/2025/10/innovation-neuro-stimulation4.png"
+          alt="Dispositif Kurage d'électrostimulation neuromusculaire appliqué à la prévention des escarres"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── LE PROBLÈME ─── -->
+<section class="section-problem">
+  <div class="container">
+    <div class="section-header">
+      <span class="overline">Comprendre le risque</span>
+      <h2>Pourquoi le patient immobilisé développe des escarres</h2>
+    </div>
+    <p>
+      L'escarre est une lésion cutanée et sous-cutanée causée par la combinaison de trois facteurs : la <strong>pression prolongée</strong> sur un point d'appui osseux (sacrum, talons, trochanters), le <strong>cisaillement</strong> des tissus lors des mobilisations partielles, et la <strong>macération</strong> liée à l'humidité. Mais ce que l'on sous-estime souvent, c'est le rôle central de la <em>perte musculaire</em> dans l'aggravation du risque.
+    </p>
+    <p>
+      Chez un patient alité depuis plusieurs jours, l'atrophie musculaire s'installe rapidement — parfois en moins d'une semaine chez le sujet âgé ou fragilisé. Or, c'est la masse musculaire sous-cutanée qui constitue le premier « coussin » protecteur des saillies osseuses. Sans elle, la peau repose directement sur l'os. La pression exercée, même modérée, suffit à comprimer les capillaires, couper l'afflux d'oxygène aux tissus et déclencher le processus de nécrose.
+    </p>
+    <p>
+      En parallèle, l'immobilité totale entraîne un ralentissement du retour veineux et lymphatique. Les membres inférieurs gonflent, la microcirculation périphérique se détériore, et les cellules cutanées ne reçoivent plus les nutriments nécessaires à leur régénération. La dénutrition — fréquente chez le patient hospitalisé de longue durée — aggrave encore la situation en affaiblissant la résistance mécanique de la peau.
+    </p>
+    <p>
+      Les protocoles de repositionnement (retournement toutes les deux à quatre heures) restent le socle de la prévention, mais ils ont leurs limites : ils dépendent de la disponibilité du personnel soignant, sont difficiles à maintenir la nuit, et ne traitent pas la dégradation musculaire de fond. C'est précisément là qu'une approche complémentaire par électrostimulation neuromusculaire prend tout son sens.
+    </p>
+  </div>
+</section>
+
+<!-- ─── MÉCANISME D'ACTION ─── -->
+<section id="mecanisme">
+  <div class="container">
+    <div class="section-header">
+      <span class="overline">Mécanisme d'action</span>
+      <h2>Comment l'électrostimulation agit sur les causes profondes</h2>
+      <p>Quatre leviers cliniques complémentaires, activés sans effort ni coopération du patient.</p>
+    </div>
+    <div class="mechanism-grid">
+
+      <article class="mech-card">
+        <div class="mech-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+        </div>
+        <h3>Contraction musculaire ciblée</h3>
+        <p>Les impulsions électriques de basse fréquence reproduisent le signal neuromusculaire naturel et déclenchent une contraction des muscles ciblés — fessiers, ischios, muscles du mollet — sans que le patient ait à fournir d'effort. Cette activation maintient la tonicité et préserve le volume musculaire protecteur sous les points d'appui.</p>
+      </article>
+
+      <article class="mech-card">
+        <div class="mech-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 7v5l3 3"/>
+          </svg>
+        </div>
+        <h3>Relance de la microcirculation</h3>
+        <p>Chaque contraction musculaire agit comme une pompe mécanique sur les vaisseaux environnants. La stimulation séquencée améliore le débit sanguin local et le retour veineux, réduisant la stase et réapportant oxygène et nutriments aux tissus menacés — y compris aux zones de pression les plus exposées.</p>
+      </article>
+
+      <article class="mech-card">
+        <div class="mech-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
+          </svg>
+        </div>
+        <h3>Préservation de la masse musculaire</h3>
+        <p>L'atrophie de déconditionnement peut survenir dès 48 à 72 heures d'immobilité complète chez les patients les plus fragiles. Des séances régulières d'électrostimulation maintiennent un stimulus suffisant pour limiter cette fonte et conserver le capitonnage naturel des saillies osseuses — première ligne de défense contre l'escarre.</p>
+      </article>
+
+      <article class="mech-card">
+        <div class="mech-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3>Complémentarité avec le repositionnement</h3>
+        <p>La solution ne remplace pas les mobilisations prescrites par l'équipe soignante. Elle intervient dans les intervalles — notamment la nuit ou lors des longues périodes de repos —  pour maintenir une activité musculaire et circulatoire de fond. Les deux approches se renforcent mutuellement pour une prévention plus robuste.</p>
+      </article>
+
+    </div>
+
+    <div class="mech-visual">
+      <img
+        src="https://kurage.fr/wp-content/uploads/2025/10/neuro-stimulation-readaptation4.png"
+        alt="Électrostimulation neuromusculaire en contexte de rééducation et réadaptation médicale"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- ─── CALLOUT CHIFFRE-CLÉ ─── -->
+<section class="callout">
+  <div class="container">
+    <div class="callout__inner">
+      <div class="callout__number" aria-hidden="true">€€€</div>
+      <div class="callout__text">
+        <h3>L'escarre : un coût humain, organisationnel et financier sous-estimé</h3>
+        <p>
+          La prise en charge d'une escarre constituée — soins infirmiers quotidiens, pansements spécialisés, consultations, risque infectieux, allongement de la durée de séjour — peut représenter plusieurs milliers d'euros par patient, sans compter l'impact sur la qualité de vie et le risque médico-légal pour l'établissement.
+        </p>
+        <p>
+          Au-delà du coût direct, l'escarre est un indicateur de qualité de soins scruté par les autorités de tutelle et les familles. Les établissements qui investissent dans la prévention réduisent leur exposition, améliorent leurs indicateurs qualité et allègent la charge de travail des équipes soignantes.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CAS D'USAGE ─── -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <span class="overline">Pour qui</span>
+      <h2>Trois contextes d'usage, une même logique de prévention</h2>
+      <p>La solution s'adapte à la réalité organisationnelle de chaque structure et au profil clinique du patient.</p>
+    </div>
+    <div class="usecase-grid">
+
+      <article class="usecase-card">
+        <div class="usecase-card__label">Établissement médicalisé</div>
+        <h3>EHPAD &amp; soins longue durée</h3>
+        <p>En EHPAD ou en unité de soins longue durée, le résident alité plusieurs heures par jour est à haut risque d'escarre. Le dispositif s'intègre à la toilette matinale : l'aide-soignant pose les électrodes, lance le programme en quelques secondes, et le résident bénéficie de la stimulation pendant son repos. Aucune surveillance continue requise.</p>
+      </article>
+
+      <article class="usecase-card">
+        <div class="usecase-card__label">Secteur hospitalier</div>
+        <h3>Centres de rééducation</h3>
+        <p>Après un AVC, une fracture du col fémoral ou une chirurgie lourde, le patient passe de longues heures alité entre les séances de kinésithérapie. L'électrostimulation comble ces intervalles inactifs, prévient l'atrophie précoce et prépare le muscle à répondre aux exercices actifs — accélérant ainsi la récupération fonctionnelle globale.</p>
+      </article>
+
+      <article class="usecase-card">
+        <div class="usecase-card__label">Ville &amp; domicile</div>
+        <h3>Maintien à domicile</h3>
+        <p>Pour le patient en soins à domicile suivi par une infirmière libérale ou un HAD, le risque d'escarre est souvent plus élevé encore — passages soignants moins fréquents, entourage familial non formé. Un dispositif simple à utiliser, paramétré lors de la première intervention professionnelle, peut être actionné quotidiennement par l'aidant.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── FAQ ─── -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="overline">Questions fréquentes</span>
+      <h2>Ce que se demandent les équipes soignantes</h2>
+    </div>
+    <div class="faq-list" role="list">
+
+      <details class="faq-item" role="listitem">
+        <summary>
+          L'électrostimulation remplace-t-elle le repositionnement régulier du patient ?
+          <svg class="faq-arrow" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-body">
+          Non. L'électrostimulation neuromusculaire est un <strong>complément</strong> aux protocoles de repositionnement, pas un substitut. Elle augmente l'efficacité de la prévention en activant la circulation et en maintenant la masse musculaire entre les retournements, mais ne dispense pas des mobilisations prescrites. Les deux approches se renforcent mutuellement.
+        </div>
+      </details>
+
+      <details class="faq-item" role="listitem">
+        <summary>
+          La solution est-elle adaptée aux patients en soins longue durée ?
+          <svg class="faq-arrow" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-body">
+          Oui. C'est précisément dans ce contexte — patient alité plusieurs semaines ou mois, mobilité très réduite, atrophie musculaire installée — que l'apport est le plus significatif. Le protocole peut être ajusté à l'état clinique du patient et au niveau de sensibilité cutanée, avec des intensités progressives.
+        </div>
+      </details>
+
+      <details class="faq-item" role="listitem">
+        <summary>
+          Faut-il une prescription médicale pour utiliser la solution Kurage ?
+          <svg class="faq-arrow" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-body">
+          En établissement de santé, l'intégration au protocole de soins est décidée par l'équipe médicale (médecin coordonnateur, médecin traitant, cadre de santé). À domicile, une prescription ou un accompagnement par un professionnel de santé — infirmier libéral, kinésithérapeute — est recommandé pour sécuriser le paramétrage initial et s'assurer de l'absence de contre-indications.
+        </div>
+      </details>
+
+      <details class="faq-item" role="listitem">
+        <summary>
+          Comment la solution s'intègre-t-elle au protocole de l'équipe soignante ?
+          <svg class="faq-arrow" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-body">
+          Le dispositif est conçu pour un usage autonome une fois paramétré. L'aide-soignant ou l'infirmier pose les électrodes lors de la toilette ou du soin, lance le programme défini par le protocole de l'établissement, et le patient bénéficie de la stimulation sans surveillance constante. Les données de session — durée, intensité, fréquence — sont accessibles pour le suivi et la traçabilité.
+        </div>
+      </details>
+
+      <details class="faq-item" role="listitem">
+        <summary>
+          Le patient ressent-il quelque chose pendant la stimulation ?
+          <svg class="faq-arrow" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-body">
+          La stimulation provoque une légère contraction musculaire et une sensation de picotement, généralement bien tolérée et souvent décrite comme agréable (sensation de chaleur, de légèreté). L'intensité est progressive et adaptable en temps réel. Pour les patients présentant des troubles de la sensibilité — neuropathie, AVC — le paramétrage doit être encadré par un professionnel afin d'éviter tout inconfort ou risque cutané.
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── MAILLAGE INTERNE ─── -->
+<section class="maillage-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="overline">Autres cas d'usage</span>
+      <h2>L'électrostimulation neuromusculaire pour chaque situation clinique</h2>
+    </div>
+    <p class="maillage-intro">La prévention des escarres est l'un des nombreux contextes dans lesquels l'électrostimulation neuromusculaire apporte une réponse validée. Explorez les autres applications.</p>
+    <div class="maillage-grid">
+
+      <a href="#" class="maillage-link" aria-label="Page : Spasticité et sclérose en plaques">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        <div class="maillage-link-text">
+          <strong>Spasticité et sclérose en plaques</strong>
+          <span>Réduire l'hypertonicité musculaire et améliorer le confort au quotidien</span>
+        </div>
+      </a>
+
+      <a href="#" class="maillage-link" aria-label="Page : Fonte musculaire post-opératoire">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        <div class="maillage-link-text">
+          <strong>Fonte musculaire post-opératoire</strong>
+          <span>Limiter l'atrophie après chirurgie lourde et accélérer le retour à l'autonomie</span>
+        </div>
+      </a>
+
+      <a href="#" class="maillage-link" aria-label="Page : Déminéralisation osseuse patient immobilisé">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        <div class="maillage-link-text">
+          <strong>Déminéralisation osseuse chez le patient immobilisé</strong>
+          <span>Maintenir la densité osseuse par stimulation mécanique des structures musculo-squelettiques</span>
+        </div>
+      </a>
+
+      <a href="#" class="maillage-link" aria-label="Page : Récupération sportive électrostimulation">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        <div class="maillage-link-text">
+          <strong>Récupération sportive par électrostimulation</strong>
+          <span>Accélérer l'élimination des déchets métaboliques et réduire les courbatures</span>
+        </div>
+      </a>
+
+      <a href="#" class="maillage-link" aria-label="Page : Gain de force musculaire athlète haute performance">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        <div class="maillage-link-text">
+          <strong>Gain de force chez l'athlète de haute performance</strong>
+          <span>Potentialiser l'entraînement et repousser les plafonds de force par stimulation ciblée</span>
+        </div>
+      </a>
+
+      <a href="#" class="maillage-link" aria-label="Page : Circulation sanguine jambes lourdes électrostimulation">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        <div class="maillage-link-text">
+          <strong>Circulation sanguine et jambes lourdes</strong>
+          <span>Stimuler le retour veineux et réduire l'œdème par activation musculaire séquencée</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA FINAL ─── -->
+<section class="cta-section" id="demo">
+  <div class="container">
+    <div class="cta-inner">
+      <span class="overline">Prochaine étape</span>
+      <h2>Évaluer la solution pour votre établissement</h2>
+      <p>Un échange de 30 minutes avec un interlocuteur Kurage vous permet d'identifier les protocoles adaptés à vos patients, d'évaluer l'intégration dans le soin existant et d'obtenir les éléments nécessaires pour un retour vers votre direction ou votre équipe médicale.</p>
+      <div class="cta-group">
+        <a href="#" class="btn btn--primary">Demander une démonstration</a>
+        <a href="#" class="btn btn--ghost">Télécharger la fiche clinique</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="container--wide">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2025 Kurage — Électrostimulation neuromusculaire pilotée par IA.</p>
+      <ul class="footer-links">
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Politique de confidentialité</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
